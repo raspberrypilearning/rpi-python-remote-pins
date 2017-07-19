@@ -4,7 +4,7 @@ With the `gpiozero` Python module you can remotely control the GPIO pins on a Ra
 
 	![raspi config](images/raspi-config.png)
 
-- On the remote Raspberry Pi, you also need to be running the **pigpio daemon**. You can start it by typing the following into a terminal:
+- On the remote Raspberry Pi, you also need to be running the **pigpio daemon**. You can start it by typing the following into a terminal window:
 
   ```bash
   sudo pigpiod
