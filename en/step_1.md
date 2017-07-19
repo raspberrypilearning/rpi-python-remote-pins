@@ -1,10 +1,10 @@
-With the `gpiozero` Python module, you can control the pins on a Raspberry Pi, from another computer.
+With the `gpiozero` Python module you can remotely control the GPIO pins on a Raspberry Pi via another computer.
 
-- The first step is to enable `Remote GPIO` on the remote Raspberry Pi. To do this, click on `Menu` > `Preferences` > `Raspberry Pi Configuration`. Then enable the `Remote GPIO` option:
+- The first step is to enable **Remote GPIO** on the Raspberry Pi you want to access remotely. To do this, click on **Menu** > **Preferences** > **Raspberry Pi Configuration**. Then enable the **Remote GPIO** option:
 
 	![raspi config](images/raspi-config.png)
 
-- On the remote Raspberry Pi, you also need to be running the `pigpio` daemon. You can start this by typing the following into a terminal.
+- On the remote Raspberry Pi, you also need to be running the **pigpio daemon**. You can start it by typing the following into a terminal:
 
   ```bash
   sudo pigpiod
@@ -16,9 +16,9 @@ With the `gpiozero` Python module, you can control the pins on a Raspberry Pi, f
 	sudo systemctl enable pigpiod
 	```
 
-- You can now remotely control the pins on the Raspberry Pi, from any computer with `gpiozero` installed.
+- You can now remotely control the GPIO pins on this Raspberry Pi from any computer on which `gpiozero` is installed.
 
-- To begin you will need to import the device you want to use in `gpiozero` and the `PiGPIOFactory`
+- On the computer with which you want to control the remote Pi, you first need to import the device you want to use in `gpiozero`, as well as the `PiGPIOFactory`.
 
 	```python
 	from gpiozero import LED
@@ -31,7 +31,7 @@ With the `gpiozero` Python module, you can control the pins on a Raspberry Pi, f
 	rem_pi = PiGPIOFactory(host="192.168.1.100")
 	```
 
-- You can now create your devices and control them. Just pass in the pin number you wish to control.
+- You can now create your devices and control them - just pass in the pin number you wish to control.
 
 	```python
 	led = LED(rem_pi(17))
