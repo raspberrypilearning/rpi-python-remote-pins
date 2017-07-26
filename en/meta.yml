@@ -1,0 +1,14 @@
+title: Using GPIO pins on a remote Raspberry Pi
+hero_image: images/banner.png
+description: Access the pins on a Raspberry Pi remotely
+original_url:
+theme: red 
+duration: 1
+listed: false
+ingredient: true
+copyedit: true
+curriculum: 
+interests:
+technologies: "physical computing"
+steps:
+  - title: Using GPIO pins remotely
