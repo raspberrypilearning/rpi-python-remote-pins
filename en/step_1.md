@@ -34,7 +34,7 @@ With the `gpiozero` Python module you can remotely control the GPIO pins on a Ra
 - You can now create your devices and control them - just pass in the pin number you wish to control.
 
 	```python
-	led = LED(rem_pi(17))
+	led = LED(17, pin_factory=rem_pi)
 	led.blink()
 	```
 
